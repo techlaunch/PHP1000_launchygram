@@ -2,9 +2,11 @@
 
 $title = "Pictures";
 
+$user = $_SESSION["user"];
+
 // get the images
 $images = $db->query("
-	SELECT A.title, A.likes, A.dislikes, A.picture AS pic, B.username AS user
+	SELECT A.id, A.title, A.likes, A.dislikes, A.picture AS pic, B.username AS user
 	FROM pictures A
 	JOIN users B
 	ON A.userid = B.id

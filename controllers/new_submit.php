@@ -4,7 +4,7 @@
 $title = $_POST["title"];
 
 // get user from the session
-$userid = "1"; // @TODO load from session
+$userid = $_SESSION["id"];
 
 // upload the image
 $ext = strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));

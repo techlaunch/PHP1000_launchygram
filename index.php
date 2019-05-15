@@ -10,6 +10,13 @@ if( ! file_exists("controllers/$page.php")) {
 	exit;
 }
 
+// start the session
+session_start();
+
+// force login to continue
+$open = ["login", "login_submit"];
+if(!in_array($page, $open) && empty($_SESSION["user"])) $page = "login";
+
 // load global variables
 $title = "LaunchyGram";
 

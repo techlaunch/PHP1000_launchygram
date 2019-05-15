@@ -35,7 +35,7 @@
 					<a class="nav-link" href="?p=list">List</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="?p=login">Logout</a>
+					<a class="nav-link" href="?p=logout_submit">Logout</a>
 				</li>
 				<?php } ?>
 			</ul>

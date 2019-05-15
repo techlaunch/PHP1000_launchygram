@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="col-sm">
-		<h1>Images</h1>
+		<h1>Images for @<?= $user ?></h1>
 	</div>
 </div>
 <div class="row">
@@ -15,8 +15,8 @@
 					<p class="card-text"><?= $img->title ?></p>
 				</div>
 				<div class="card-body">
-					<a href="#" class="card-link"><?= $img->likes ?> Like</a>
-					<a href="#" class="card-link"><?= $img->dislikes ?> Dislike</a>
+					<a href="?p=like_submit&id=<?= $img->id ?>&action=likes" class="card-link"><?= $img->likes ?> Like</a>
+					<a href="?p=like_submit&id=<?= $img->id ?>&action=dislikes" class="card-link"><?= $img->dislikes ?> Dislike</a>
 				</div>
 			</div>
 		</div>

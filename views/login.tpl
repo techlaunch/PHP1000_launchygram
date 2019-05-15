@@ -2,6 +2,12 @@
 
 <div class="row">
 	<div class="col-sm">
+		<?php if($error) { ?>
+			<div class="alert alert-danger">
+				<strong>Error!</strong> Username and Password does not match. 
+			</div>
+		<?php } ?>
+
 		<h1>Login</h1>
 		<form action="?p=login_submit" method="post">
 			<div class="form-group">

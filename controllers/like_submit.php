@@ -3,6 +3,7 @@
 // catch params from the get
 $id = $_GET["id"];
 $action = $_GET["action"]; // likes or dislikes
+$view = $_GET["v"]; // what view to return to
 
 // update likes or dislike
 if(in_array($action, ['likes', 'dislikes'])) {
@@ -10,4 +11,4 @@ if(in_array($action, ['likes', 'dislikes'])) {
 }
 
 // redirect to login
-header("Location: ?p=list");
+header("Location: ?p=list&v=$view");

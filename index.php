@@ -22,11 +22,10 @@ $title = "LaunchyGram";
 
 // connect to the database
 include "classes/Database.php";
-$db = new Database();
-$db->connect();
+
+// include models
+include "models/Users.php";
+include "models/Pictures.php";
 
 // include the controller
 include "controllers/$page.php";
-
-// close the mysql connection
-$db->disconnect();

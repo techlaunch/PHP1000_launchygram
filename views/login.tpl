@@ -14,8 +14,8 @@
 				<label for="user">Username</label>
 					<select class="form-control" id="user" name="user">
 					<option value=""></option>
-					<?php foreach($users as $user) { ?>
-						<option value="<?= $user->username ?>"><?= $user->username ?></option>
+					<?php foreach($users as $u) { ?>
+						<option value="<?= $u ?>"><?= $u ?></option>
 					<?php } ?>
 				</select>
 			</div>

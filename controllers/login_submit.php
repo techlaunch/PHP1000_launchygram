@@ -1,11 +1,14 @@
 <?php
 
+// build models
+$usersModel = new Users();
+
 // catch user/pass
 $user = $_POST["user"];
-$pass = md5($_POST["pass"]);
+$pass = $_POST["pass"];
 
 // check against the database
-$result = $db->query("SELECT id, username FROM users WHERE username='$user' AND password='$pass'");
+$result = $usersModel->checkUserAndPass($user, $pass);
 
 // user and password matches
 if(count($result) > 0) {

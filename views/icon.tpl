@@ -12,7 +12,7 @@
 			<select class="form-control" id="user" onchange="change()">
 				<option value="%">All</option>
 				<?php foreach($users as $user) { ?>
-					<option value="<?= $user->username ?>" <?php if($fuser==$user->username) echo "selected"; ?>><?= $user->username ?></option>
+					<option value="<?= $user ?>" <?php if($fuser==$user) echo "selected"; ?>><?= $user ?></option>
 				<?php } ?>
 			</select>
 		</div>
